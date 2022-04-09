@@ -37,7 +37,9 @@ public class Dealing {
 		} finally {
 			sc.close();
 		}
+		
 	}
+	
 
 	private void printHandAndValue(List<Card> hand, int value) {
 		for (Card card : hand) {

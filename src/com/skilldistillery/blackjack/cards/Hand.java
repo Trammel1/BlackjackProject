@@ -1,15 +1,16 @@
 package com.skilldistillery.blackjack.cards;
 
-public abstract class Hand extends Card {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Hand {
+// a hand is a collection of cards
 	
-
-	public Hand(Suit suit, Rank rank) {
-		super(suit, rank);
-		// TODO great hand method to deal two cards
-
+	private List<Card> cards;
+	
+	public Hand() {
+		cards = new ArrayList<>();
 	}
-
 	public void addCard(Card Card) {
 
 	}
@@ -19,10 +20,12 @@ public abstract class Hand extends Card {
 	}
 
 	public int getHandValue() {
-		return 0;
+		int value = 0;
+		return value;
 	}
 
+	@Override
 	public String toString() {
-		return null;
+		return "Hand [cards=" + cards + "]";
 	}
 }

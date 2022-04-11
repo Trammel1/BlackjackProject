@@ -12,9 +12,9 @@ public class Deck {
 	}
 
 	private List<Card> createDeck() {
-		
+
 		List<Card> deck = new ArrayList<>(52);
-		
+
 		for (Suit s : Suit.values()) {
 			for (Rank r : Rank.values()) {
 				deck.add(new Card(s, r));
@@ -33,6 +33,10 @@ public class Deck {
 
 	public Card dealCard() {
 		return cards.remove(0);
+	}
+
+	public List<Card> getCardsFromDeck() {
+		return this.cards;
 	}
 
 }

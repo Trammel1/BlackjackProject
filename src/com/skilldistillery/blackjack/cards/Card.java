@@ -13,6 +13,7 @@ public class Card {
 		return rank.getValue();
 	}
 
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

@@ -3,7 +3,7 @@ package com.skilldistillery.blackjack.cards;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hand {
+public abstract class Hand {
 // a hand is a collection of cards
 	
 	private List<Card> cards;
@@ -12,6 +12,8 @@ public class Hand {
 		cards = new ArrayList<>();
 	}
 	public void addCard(Card Card) {
+		cards.add(Card);
+
 
 	}
 

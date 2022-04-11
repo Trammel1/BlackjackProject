@@ -5,25 +5,37 @@ import java.util.List;
 
 public abstract class Hand {
 // a hand is a collection of cards
-	
-	private List<Card> cards;
-	
+
+	public List<Card> cards;
+
 	public Hand() {
 		cards = new ArrayList<>();
 	}
+
+	public List<Card> getCards() {
+		return cards;
+	}
+
+	public void setCards(List<Card> cards) {
+		this.cards = cards;
+	}
+
 	public void addCard(Card Card) {
 		cards.add(Card);
 
-
 	}
 
-	public void clear() {
-
+	public List<Card> getHand() {
+		return cards;
 	}
 
 	public int getHandValue() {
 		int value = 0;
 		return value;
+	}
+
+	public void clear() {
+		cards.clear();
 	}
 
 	@Override

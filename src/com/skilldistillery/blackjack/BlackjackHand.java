@@ -1,29 +1,54 @@
 package com.skilldistillery.blackjack;
 
+import java.util.List;
+
+import com.skilldistillery.blackjack.cards.Card;
 import com.skilldistillery.blackjack.cards.Hand;
 
 public class BlackjackHand extends Hand {
 	public BlackjackHand() {
 		// TODO Auto-generated constructor stub
 	}
+
+	public List<Card> getCards() {
+		return this.cards;
+	}
+
 	public int getHandValue() {
 		//TODO create getHandValue method
-		int totalValue = 0;
-		for (int i = 0; i < getHand().size(); i++) {
-			totalValue += getHand().get(i).getValue();
+		int total = 0;
+		
+		for (Card card : cards) {
+			total += card.getValue();
 		}
-		return totalValue;
+		return total;
 	}
-		return 0;
+
+	
 
 	public boolean isBlackjack() {
-		//TODO create isBlackjack method
-		return false;
-	}
-	public boolean isBust() {
-		//TODO create isBust method
+		int total = getHandValue();
 
-		return false;
+		Boolean is21 = false;
+		
+		if (total == 21) {
+			is21 = true;
+		}
+		
+		return is21;
 	}
-	
+
+	public boolean isBust() {
+		// TODO create isBust method
+		int total = getHandValue();
+
+		Boolean isOver21 = false;
+		
+		if (total > 21) {
+			isOver21 = true;
+		}
+		
+		return isOver21;
+	}
+
 }

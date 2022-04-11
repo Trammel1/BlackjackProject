@@ -1,12 +1,17 @@
 package com.skilldistillery.blackjack;
 
+import java.util.Scanner;
+
 public class BlackjackApplication {
+	private Scanner kb = new Scanner(System.in);
+	private Dealer dealer = new Dealer();
+	private Player p1 = new Player();
 
 	public static void main(String[] args) {
 		BlackjackApplication app = new BlackjackApplication();
 		app.run();
+		
 	}
-
 	private void run() {
 		// TODO Auto-generated method stub
 		System.out.println("  BLACKJACK RULES: ");
@@ -18,8 +23,12 @@ public class BlackjackApplication {
 		System.out.println("	-The goal is to have a higher card total than the dealer without going over 21.");
 		System.out.println("	-If the player total equals the dealer total, it is a “Push” and the hand ends."); 
 		System.out.println("	-Players win if they beat the dealer. Players win automatically if they get “Blackjack” which is 21.");
-
+		dealer.getDeck().shuffle();
+		
+		p1.getBJhand().clear();
+		dealer.getBJhand().clear();
 	}
+	
 		
 }
 

@@ -14,6 +14,10 @@ public class BlackjackHand extends Hand {
 		return this.cards;
 	}
 
+	public int getCardsSize() {
+		return this.cards.size();
+	}
+
 	public int getHandValue() {
 		//TODO create getHandValue method
 		int total = 0;
@@ -23,8 +27,6 @@ public class BlackjackHand extends Hand {
 		}
 		return total;
 	}
-
-	
 
 	public boolean isBlackjack() {
 		int total = getHandValue();

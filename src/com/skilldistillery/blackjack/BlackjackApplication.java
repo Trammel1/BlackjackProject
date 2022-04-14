@@ -24,9 +24,10 @@ public class BlackjackApplication {
 		System.out.println("	-If the player total equals the dealer total, it is a “Push” and the hand ends."); 
 		System.out.println("	-Players win if they beat the dealer. Players win automatically if they get “Blackjack” which is 21.");
 		dealer.getDeck().shuffle();
+		dealer.getDealing(null);
 		
-		p1.getBJhand().clear();
-		dealer.getBJhand().clear();
+		p1.getBJhand();
+		dealer.getBJhand();
 	}
 	
 		

@@ -20,6 +20,11 @@ public class Player {
 	public void addToHand(Card card) {
 		this.BJhand.addCard(card);
 	}
+
+	public void playBJhand() {
+		return;
+		
+	}
 }
 
 

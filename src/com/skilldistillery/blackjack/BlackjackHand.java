@@ -10,7 +10,8 @@ public class BlackjackHand extends Hand {
 		// TODO Auto-generated constructor stub
 	}
 
-	public List<Card> getCards() {
+	public List<Card> getBJhand() {
+		
 		return this.cards;
 	}
 
@@ -18,7 +19,7 @@ public class BlackjackHand extends Hand {
 		return this.cards.size();
 	}
 
-	public int getHandValue() {
+	public int getBJhandValue() {
 		//TODO create getHandValue method
 		int total = 0;
 		

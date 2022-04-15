@@ -11,7 +11,7 @@ public class Deck {
 		cards = createDeck();
 	}
 
-	private List<Card> createDeck() {
+	public List<Card> createDeck() {
 
 		List<Card> deck = new ArrayList<>(52);
 
@@ -32,7 +32,7 @@ public class Deck {
 	}
 
 	public Card dealCard() {
-		return cards.remove(0);
+		return cards.remove(2);
 	}
 
 	public List<Card> getCardsFromDeck() {

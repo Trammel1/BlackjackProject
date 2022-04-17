@@ -1,7 +1,5 @@
 package com.skilldistillery.blackjack;
 
-import com.skilldistillery.blackjack.cards.Card;
-
 import java.util.Scanner;
 
 public class BlackjackApplication {
@@ -33,7 +31,7 @@ public class BlackjackApplication {
 		p1.addToHand(d.getDeck().dealCard());
 		d.addToHand(d.getDeck().dealCard());
 		d.addToHand(d.getDeck().dealCard());
-
+		
 		System.out.println("Enter Hit or Stay: ");
 		String choice = kb.next();
 		while (choice.equalsIgnoreCase("Hit")) {
@@ -41,29 +39,45 @@ public class BlackjackApplication {
 			System.out.println("Enter Hit or Stay: ");
 			choice = kb.next();
 		}
-		if(p1.getBJhandValue() == 21) {
-			displayWinner("player 1");
-			return;
+		
+		if (d.getBJhandValue() == 21) {
+			displayWinner("dealer (BlackJack!!!)");
+			close();
+		}else if (p1.getBJhandValue() == 21) {
+			displayWinner("player 1 (BlackJack!!!)");
+			close();
 		}
 //		The Dealer must decide to Hit or Stay based on the rules of Blackjack: if the Dealer's 
 //		hand total is below 17, the Dealer must Hit; if the hand total is 17 or above, the Dealer must Stay.
+		
 		while (d.getBJhandValue() < 17) {
 			d.addToHand(d.getDeck().dealCard());
 		}
-		
-		
-		
-////		d.getDealing(null, p1, d);
-////		p1.getCard();
-//		p1.addToHand(null);
-//		d.getBJhand();
-//		p1.getHandValue();
-//		p1.addToHand(null);
-//		p1.displayHand();
-//		d.addToHand(null);
-//		d.displayHand();
-//		displayWinner();
+		boolean p1Bust = p1.getBJhandValue() > 21;
+		boolean dBust = d.getBJhandValue() > 21;
+		if (p1Bust && dBust) {
+			displayPush();
+		} else if (p1Bust) {
+			displayWinner("dealer");
+		} else if (dBust) {
+			displayWinner("player 1");
+		} else {
+			if (p1.getBJhandValue() == d.getBJhandValue()) {
+				displayPush();
 
+			} else if (p1.getBJhandValue() > d.getBJhandValue()) {
+				displayWinner("player 1");
+			} else if (p1.getBJhandValue() < d.getBJhandValue()) {
+				displayWinner("dealer");
+			}
+		}
+		d.getDeck().printDeck();
+	}
+	
+
+	
+	private void displayPush() {
+		System.out.println("Push ");
 	}
 
 	private void displayWinner(String winner) {
@@ -72,8 +86,8 @@ public class BlackjackApplication {
 	}
 
 	private void close() {
-		// TODO Auto-generated method stub
-
+	
+		System.exit(0);
 	}
 
 }

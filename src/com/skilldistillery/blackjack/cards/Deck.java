@@ -38,5 +38,10 @@ public class Deck {
 	public List<Card> getCardsFromDeck() {
 		return this.cards;
 	}
-
+	public void printDeck() {
+		for(Card card: cards) {
+			System.out.println(card);
+		}
+		System.out.println(checkDeckSize());
+	}
 }

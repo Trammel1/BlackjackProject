@@ -31,7 +31,7 @@ public class Player {
 		
 	}
 	public void addToHand(Card card) {
-		System.out.println(card);
+		System.out.println("Added to Player's hand: " + card);
 		this.BJhand.addCard(card);
 	}
 
@@ -40,9 +40,7 @@ public class Player {
 		return BJhand.getBJhandValue();
 	}
 
-	public int displayHand() {
-		return  0;		
-	}
+	
 
 	
 	

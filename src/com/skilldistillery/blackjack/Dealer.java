@@ -47,6 +47,7 @@ public class Dealer {
 	}
 
 	public void addToHand(Card card) {
+		System.out.println("Added to Dealer's hand: " + card);
 		this.BJhand.addCard(card);
 	}
 

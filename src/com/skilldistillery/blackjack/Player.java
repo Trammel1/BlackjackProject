@@ -26,14 +26,18 @@ public class Player {
 		return BJhand;
 	}
 
+	public void setBJhand(BlackjackHand bJhand) {
+		BJhand = bJhand;
+		
+	}
 	public void addToHand(Card card) {
 		System.out.println(card);
 		this.BJhand.addCard(card);
 	}
 
-	public int getHandValue() {
+	public int getBJhandValue() {
 		
-		return BJhand.getHandValue();
+		return BJhand.getBJhandValue();
 	}
 
 	public int displayHand() {

@@ -20,13 +20,8 @@ public class BlackjackHand extends Hand {
 	}
 
 	public int getBJhandValue() {
-		//TODO create getHandValue method
-		int total = 0;
 		
-		for (Card card : cards) {
-			total += card.getValue();
-		}
-		return total;
+		return this.getHandValue();
 	}
 
 	public boolean isBlackjack() {

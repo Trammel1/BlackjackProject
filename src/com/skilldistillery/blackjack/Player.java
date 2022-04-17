@@ -20,21 +20,19 @@ public class Player {
 		System.out.println("Amount bet = $" + i);
 		return i;		
 	}
-	public void displayBet() {
-	System.out.println("Bet amount is ");
-	
-	}
 
 	public BlackjackHand getBJhand() {
-		System.out.println(BJhand);
+		
 		return BJhand;
 	}
 
 	public void addToHand(Card card) {
+		System.out.println(card);
 		this.BJhand.addCard(card);
 	}
 
 	public int getHandValue() {
+		
 		return BJhand.getHandValue();
 	}
 

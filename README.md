@@ -10,4 +10,4 @@ This is a program for how to play blackjack. Although incomplete it has a multit
 * WYZANT 
 
 # Lesson Learned
-I learned how to create enumerated types and have classes call on those enums. The blackjack project also brought out an emphasis on UML designs, this is a crucial part of programming figuring out what class will do what in java and in real life. I learned I can combine all the if statements to determine a winning condition for blackjack. I also learned to manage and use each condition to create other conditions for doing something else by using the conditions in the method to get another mehod.
+I learned how to create enumerated types and have classes call on those enums. The blackjack project also brought out an emphasis on UML designs, this is a crucial part of programming figuring out what class will do what in java and in real life. I learned I can combine all the if statements to determine a winning condition for blackjack. I also learned to manage and use each condition to create other conditions for doing something else by using the conditions in the method to get another method.

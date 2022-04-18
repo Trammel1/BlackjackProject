@@ -42,6 +42,6 @@ public class Deck {
 		for(Card card: cards) {
 			System.out.println(card);
 		}
-		System.out.println(checkDeckSize());
+		System.out.println("Number of cards left in the deck is "+ checkDeckSize());
 	}
 }

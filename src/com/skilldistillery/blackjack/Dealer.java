@@ -1,15 +1,11 @@
 package com.skilldistillery.blackjack;
 
 import com.skilldistillery.blackjack.cards.Deck;
-import com.skilldistillery.blackjack.BlackjackHand;
-
 import com.skilldistillery.blackjack.cards.Card;
-import com.skilldistillery.blackjack.cards.Dealing;
 
 public class Dealer {
 	private Deck deck = new Deck();
 	protected BlackjackHand BJhand = new BlackjackHand();
-	private Dealing deal = new Dealing();
 
 	public Dealer() {
 		setDeck(new Deck());
@@ -23,14 +19,6 @@ public class Dealer {
 	public void setDeck(Deck deck) {
 		this.deck = deck;
 	}
-//
-//	public Dealing getDealing(Card cards, Player p1, Dealer d) {
-//		for (int i = 0; i < 2; i++) {
-//		p1.BJhand.getCards();
-//		d.deck.getCardsFromDeck();
-//		}
-//		return deal;
-//	}
 
 	public BlackjackHand getBJhand() {
 
@@ -49,11 +37,13 @@ public class Dealer {
 	public void addToHand(Card card) {
 		System.out.println("Added to Dealer's hand: " + card);
 		this.BJhand.addCard(card);
+		System.out.println("Dealer Hand: " + getBJhand());
+
 	}
 
-	public void displayHand() {
-		// TODO Auto-generated method stub
-
+	public BlackjackHand displayHand() {
+		
+		return getBJhand();
 	}
 
 }

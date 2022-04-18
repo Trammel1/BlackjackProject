@@ -1,8 +1,6 @@
 package com.skilldistillery.blackjack;
 
 import com.skilldistillery.blackjack.cards.Card;
-import com.skilldistillery.blackjack.cards.Hand;
-import com.skilldistillery.blackjack.BlackjackHand;
 import java.util.Scanner;
 
 public class Player {
@@ -13,35 +11,35 @@ public class Player {
 	public Player() {
 		this.BJhand = new BlackjackHand();
 	}
+
 	public double placeBet() {
-	
+
 		System.out.println("Enter bet amount: ");
 		double i = kb.nextDouble();
 		System.out.println("Amount bet = $" + i);
-		return i;		
+		return i;
 	}
 
 	public BlackjackHand getBJhand() {
-		
+
 		return BJhand;
 	}
 
 	public void setBJhand(BlackjackHand bJhand) {
 		BJhand = bJhand;
-		
+
 	}
+
 	public void addToHand(Card card) {
 		System.out.println("Added to Player's hand: " + card);
 		this.BJhand.addCard(card);
+		System.out.println("Player Hand: " + getBJhand());
+
 	}
 
 	public int getBJhandValue() {
-		
+
 		return BJhand.getBJhandValue();
 	}
 
-	
-
-	
-	
 }

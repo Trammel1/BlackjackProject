@@ -7,9 +7,7 @@ import com.skilldistillery.blackjack.cards.Hand;
 
 public class BlackjackHand extends Hand {
 	public BlackjackHand() {
-		// TODO Auto-generated constructor stub
 	}
-
 	public List<Card> getBJhand() {
 		
 		return this.cards;
@@ -22,31 +20,6 @@ public class BlackjackHand extends Hand {
 	public int getBJhandValue() {
 		
 		return this.getHandValue();
-	}
-
-	public boolean isBlackjack() {
-		int total = getHandValue();
-
-		Boolean is21 = false;
-		
-		if (total == 21) {
-			is21 = true;
-		}
-		
-		return is21;
-	}
-
-	public boolean isBust() {
-		// TODO create isBust method
-		int total = getHandValue();
-
-		Boolean isOver21 = false;
-		
-		if (total > 21) {
-			isOver21 = true;
-		}
-		
-		return isOver21;
 	}
 
 }

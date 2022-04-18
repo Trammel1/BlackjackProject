@@ -33,9 +33,9 @@ public class Dealer {
 	public Card getCard() {
 		return BJhand.getCards().get(2);
 	}
-
+//	"Added to Dealer's hand: " + 
 	public void addToHand(Card card) {
-		System.out.println("Added to Dealer's hand: " + card);
+		System.out.println(card);
 		this.BJhand.addCard(card);
 		System.out.println("Dealer Hand: " + getBJhand());
 

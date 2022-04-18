@@ -29,9 +29,9 @@ public class Player {
 		BJhand = bJhand;
 
 	}
-
+//	"Added to Player's hand: " + 
 	public void addToHand(Card card) {
-		System.out.println("Added to Player's hand: " + card);
+		System.out.println(card);
 		this.BJhand.addCard(card);
 		System.out.println("Player Hand: " + getBJhand());
 

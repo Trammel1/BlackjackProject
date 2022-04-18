@@ -20,13 +20,11 @@ public class BlackjackApplication {
 		System.out.println("	-Player and Dealer is dealt 2 cards. ");
 		System.out.println("	-Cards are equal to their value with face cards being 10 and an Ace being 1 or 11.");
 		System.out.println("	-The players cards are added up for their total.");
-		System.out.println(
-				"	-Players “Hit” to gain another card from the deck. Players “Stay” to keep their current card total.");
+		System.out.println("	-Players “Hit” to gain another card from the deck. Players “Stay” to keep their current card total.");
 		System.out.println("	-Dealer “Hits” until they equal or exceed 17.");
 		System.out.println("	-The goal is to have a higher card total than the dealer without going over 21.");
 		System.out.println("	-If the player total equals the dealer total, it is a “Push” and the hand ends.");
-		System.out.println(
-				"	-Players win if they beat the dealer. Players win automatically if they get “Blackjack” which is 21.");
+		System.out.println("	-Players win if they beat the dealer. Players win automatically if they get “Blackjack” which is 21.");
 		d.getDeck().shuffle();
 		p1.placeBet();
 		p1.addToHand(d.getDeck().dealCard());
@@ -73,12 +71,11 @@ public class BlackjackApplication {
 		boolean p1Bust = pnum > 21;
 		boolean dBust = dnum > 21;
 		if (p1Bust) {
-			System.out.println("Player 1 Bust! ");
+			System.out.println("Player 1 Bust! Winner Dealer!");
 			close();
 		}
 		if (dBust) {
 			System.out.println("Dealer Bust! ");
-			close();
 		}
 	}
 
